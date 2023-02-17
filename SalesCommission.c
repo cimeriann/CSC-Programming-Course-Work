@@ -25,7 +25,7 @@ int main( void )
 
         // print the sales commission after it's been calculated
         printf("Salary is: $ %.2f \n", salesCommission);
-
+        printf("\n");//print new line
     }
     return(0);
 }
