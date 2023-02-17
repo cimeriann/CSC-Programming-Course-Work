@@ -18,7 +18,9 @@ int main ( void ){
         scanf("%f", &principal);//read and store integer into principal variable
 
         //check if principal entered == -1
-        if (principal == -1) break;
+        if (principal == -1) {
+            break;
+        }
         
         //prompt user for interest rate
         printf("Enter interest rate: ");

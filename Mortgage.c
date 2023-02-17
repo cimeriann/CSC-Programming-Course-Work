@@ -39,11 +39,14 @@ int main( void )
         printf("Enter interest rate (as a decimal): ");
         scanf("%f", &interestRate);// read value entered and store in variable
 
+        //compute the total amount
         totalAmount = mortgageAmount + (mortgageAmount * interestRate * mortgageTerm);
+
+        // compute the monthly payable interest
         monthlyPayable = (totalAmount / (12 * mortgageTerm));
         printf("The monthly payable interest $ %d \n", (int)monthlyPayable);
 
         printf("\n");
     }
-    return (0);
+    return (0);//code runs successfully
 }// end function main

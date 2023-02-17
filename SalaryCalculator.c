@@ -32,5 +32,5 @@ int main(void) {
         printf("Salary is $%.2f\n", salary);  // Print the salary
     }
 
-    return 0;
-}
+    return(0);//code runs successfully
+}// end main function
