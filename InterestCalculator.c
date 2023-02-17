@@ -1,5 +1,10 @@
 //Interest Calculator Program
 #include <stdio.h>
+/**
+ * main - Entry point
+ * 
+ * @return (0) - Success 
+ */
 int main ( void ){
     float interest;//interest accrued on principal
     float principal;// principal amount to be loaned
