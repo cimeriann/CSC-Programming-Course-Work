@@ -3,7 +3,7 @@ a) Every C program begins execution at the function _______
 ans: Programs in C begin execution at the function 'Main'
 
 b) Every function’s body begins with and ends with____
-ans: Functions' bodies begin and end with 'Braces'
+ans: Functions' bodies begin with a left brace and end with 'right braces'
 
 c) Every statement ends with a(n) .
 ans: Statements in C end with semicolons
@@ -26,15 +26,16 @@ value in that location. This process is said to be DESTRUCTIVE
 i) When a value is read from a memory location, the value in that location is preserved;
 this process is said to be NONDESTRUCTIVE 
 
-j) The CONDITIONAL statement is used to make decisions.
+j) The IF CONDITIONAL statement is used to make decisions.
 
 2.2 State whether each of the following is true or false. If false, explain why.
 
 a) Function printf always begins printing at the beginning of a new line.
-ans: False. The printf function doesn't include the newline character by default(a charactertics of 'puts')
+ans: False.  Function printf always begins printing where the cursor is positioned,
+and this may be anywhere on a line of the screen.The printf function doesn't include the newline character by default(a charactertic of 'puts')
 
 b) Comments cause the computer to display the text after // on the screen when the program is executed.
-ans: False. comments don't cause any code to be generated as the code is compiled
+ans: False. comments don not cause any action to be performed when the program is executed
 
 c) The escape sequence \n when used in a printf format control string causes the cursor
 to position to the beginning of the next line on the screen.
@@ -62,69 +63,87 @@ j) The arithmetic operators *, /, %, + and - all have the same level of preceden
 ans: False. operators have different levels of precedence.
 
 k) A program that prints three lines of output must contain three printf statements.
-ans: False. The escape sequence /n can use to print new lines.
+ans: False. The escape sequence \n can use to print new lines.
 
 2.3 Write a single C statement to accomplish each of the following:
 a) Define the variables c, thisVariable, q76354 and number to be of type int.
-b) Prompt the user to enter an integer. End your prompting message with a colon (:) followed by a space and leave the cursor positioned after the space.
+ans: int c, thisVariable, q76354, number;
+
+b) Prompt the user to enter an integer. End your prompting message with a colon (:) followed by a 
+   space and leave the cursor positioned after the space.
+ans: printf("Enter an integer: ");
+
 c) Read an integer from the keyboard and store the value entered in integer variable a.
+ans: scanf("%d", &a);
+
 d) If number is not equal to 7, print "The variable number is not equal to 7."
+ans: if (number != 7){
+    puts("The variable number is not equal to 7.");
+};
+
 e) Print the message "This is a C program." on one line.
+ans: puts("This is a C program.");
+
 f) Print the message "This is a C program." on two lines so that the first line ends with C. 
-94 Chapter 2 Introduction to C Programming
-g) Print the message "This is a C program." with each word on a separate line. 
+ans: printf("This is a C \n program.\n");
+
+g) Print the message "This is a C program." with each word on a separate line.
+ans: printf("This \n is \n a \n C \n program.");
+
 h) Print the message "This is a C program." with the words separated by tabs.
+ans: printf("This \t is \t a \t C \t program. ");
+
 2.4 Write a statement (or comment) to accomplish each of the following:
 a) State that a program will calculate the product of three integers.
+ans: //Program which calculates the product of three integers
+
 b) Prompt the user to enter three integers.
+ans: printf("Enter three integers: ");
+
 c) Define the variables x, y and z to be of type int.
+ans: int x, y, z;
+
 d) Read three integers from the keyboard and store them in the variables x, y and z.
+ans: scanf("%d %d %d", &x, &y, &z);
+
 e) Define the variable result, compute the product of the integers in the variables x, y and
 z, and use that product to initialize the variable result.
+ans: int result = x * y * z;
+
 f) Print "The product is" followed by the value of the integer variable result.
+ans: printf("The product is %d", result);
+
 2.5 Using the statements you wrote in Exercise 2.4, write a complete program that calculates
 the product of three integers.
+ans: int main (void){
+    //prompt user for integers
+    printf("Enter three integers: ");
+    
+    //initialize variables
+    int x, y, z;
+
+    //read and store ints entered by user
+    scanf("%d %d %d", &x, &y, &z);
+
+    //compute the result and store in variable
+    int result = x * y * z;
+
+    //print result
+    printf("The product is %d", result);
+}
 2.6 Identify and correct the errors in each of the following statements:
 a) printf( "The value is %d\n", &number );
+ans: There should not be an ampersand before the variable 'number'
+
 b) scanf( "%d%d", &number1, number2 );
+ans: There should be an ampersand before the variable 'number2'
+
 c) if ( c < 7 );{
  printf( "C is less than 7\n" );
 } 
+ans: There shouldn't be a semicolon after the conditional statement
+
 d) if ( c => 7 ) {
  printf( "C is greater than or equal to 7\n" );
 } 
-Answers to Self-Review Exercises
-2.1 a) main. b) left brace ({), right brace (}). c) semicolon. d) printf. e) newline. f) scanf.
-g) %d. h) destructive. i) nondestructive. j) if.
-2.2 a) False. Function printf always begins printing where the cursor is positioned,
-and this may be anywhere on a line of the screen.
-b) False. Comments do not cause any action to be performed when the program is executed. They’re used to document programs and improve their readability.
-c) True.
-d) True.
-e) True.
-f) False. C is case sensitive, so these variables are unique.
-g) True.
-h) False. Arguments in a printf function ordinarily should not be preceded by an ampersand. Arguments following the format control string in a scanf function ordinarily
-should be preceded by an ampersand. We’ll discuss exceptions to these rules in
-Chapter 6 and Chapter 7.
-i) True.
-j) False. The operators *, / and % are on the same level of precedence, and the operators +
-and - are on a lower level of precedence.
-k) False. A printf statement with multiple \n escape sequences can print several lines.
-2.3 a) int c, thisVariable, q76354, number;
-b) printf( "Enter an integer: " );
-c) scanf( "%d", &a );
-d) if ( number != 7 ) {
- printf( "The variable number is not equal to 7.\n" );
-}
- Exercises 95
-e) printf( "This is a C program.\n" );
-f) printf( "This is a C\nprogram.\n" );
-g) printf( "This\nis\na\nC\nprogram.\n" );
-h) printf( "This\tis\ta\tC\tprogram.\n" );
-2.4 a) // Calculate the product of three integers
-b) printf( "Enter three integers: " );
-c) int x, y, z;
-d) scanf( "%d%d%d", &x, &y, &z );
-e) int result = x * y * z;
-f) printf( "The product is %d\n", result );
+ans: The operator should be written as '>=' instead of '=>'
