@@ -1,0 +1,304 @@
+Fill in the blanks in each of the following questions.
+a) A procedure for solving a problem in terms of the actions to be executed and the order
+in which the actions should be executed is called a(n) .
+ans: Algorithm
+
+b) Specifying the execution order of statements by the computer is called .
+ans: Program Control
+c) All programs can be written in terms of three types of control statements: ,
+ and .
+ ans: Sequence, Iteration and Selection structures
+
+ Self-Review Exercises 133
+d) The IF-ELSE selection statement is used to execute one action when a condition is true
+and another action when that condition is false.
+
+e) Several statements grouped together in braces ({ and }) are called a(n) .
+ans: BLOCK or Compound Statement 
+
+f) The WHILE iteration statement specifies that a statement or group of statements is to
+be executed repeatedly while some condition remains true.
+
+g) Iteration of a set of instructions a specific number of times is called iteration.
+ans: COUNTER-CONTROLLED 
+
+h) When it’s not known in advance how many times a set of statements will be repeated,
+a(n) value can be used to terminate the iteration.
+ans: SENTINEL VALUE 
+
+3.2 Write four different C statements that each add 1 to integer variable x.
+ans:    x +=1;
+        x = x + 1;
+        x++;
+        ++x;
+
+3.3 Write a single C statement to accomplish each of the following:
+a) Multiply the variable product by 2 using the *= operator.
+ans: product *= 2;
+
+b) Multiply the variable product by 2 using the = and * operators.
+ans: product = product * 2;
+
+c) Test whether the value of the variable count is greater than 10. If it is, print “Count is
+greater than 10.”
+ans: if (variable > 10) {
+    puts("Count is greater than 10.")
+    }
+
+d) Calculate the remainder after q is divided by divisor and assign the result to q. Write
+this statement two different ways.
+ans: int q = q % divisor;
+     q %= divisor;
+
+e) Print the value 123.4567 with two digits of precision. What value is printed?
+ans: printf("%.2f", 123.4567);
+     The statement prints 123.46;
+
+f) Print the floating-point value 3.14159 with three digits to the right of the decimal point.
+What value is printed?
+ans: printf("%.3f", 3.14519);
+     The statement prints 3.145
+
+3.4 Write a C statement to accomplish each of the following tasks.
+a) Define variables sum and x to be of type int.
+ans: int sum, x;
+
+b) Set variable x to 1.
+ans: x = 1;
+
+c) Set variable sum to 0.
+ans: sum = 0;
+
+d) Add variable x to variable sum and assign the result to variable sum.
+ans: sum += x;
+
+e) Print "The sum is: " followed by the value of variable sum.
+ans: printf("The sum is: %d", sum);
+
+3.5 Combine the statements that you wrote in Exercise 3.4 into a program that calculates the
+sum of the integers from 1 to 10. Use the while statement to loop through the calculation and increment statements.
+The loop should terminate when the value of x becomes 11.
+ans: int main (void){
+    int sum, x;
+
+    x = 1;
+    sum = 0;
+    while (x != 11){
+        sum += x;
+        x++;
+    }
+    printf("The sum is: %d", sum);
+}
+3.6 Write single C statements that
+a) Input unsigned integer variable x with scanf. Use the conversion specifier %u.
+ans: unsigned int x;
+     scanf("%u", &x);
+
+b) Input unsigned integer variable y with scanf. Use the conversion specifier %u.
+ans: unsigned int y;
+     scanf("%u", &y);
+
+c) Set unsigned integer variable i to 1.
+ans: unsigned int i = 1;
+
+d) Set unsigned integer variable power to 1.
+ans: unsigned int power = 1;
+
+e) Multiply unsigned integer variable power by x and assign the result to power.
+ans: power *= x;
+
+f) Increment variable i by 1.
+ans: i++;
+
+g) Test i to see if it’s less than or equal to y in the condition of a while statement.
+ans: while (i <= y)
+
+h) Output unsigned integer variable power with printf. Use the conversion specifier %u.
+ans: printf("%u", power);
+
+3.7 Write a C program that uses the statements in Exercise 3.6 to calculate x raised to the y
+power. The program should have a while iteration control statement.
+ans: int main (void){
+    unsigned int x;
+    unsigned int y;
+
+    unsigned int power = 1;
+    unsigned int i = 1;
+
+    scanf("%u", &x);
+    scanf("%u", &y);
+
+    while(i <=y ){
+        power *= x;
+        i++;
+    }
+    printf("%u", power);
+}
+
+3.8 Identify and correct the errors in each of the following:
+a) while ( c <= 5 ) {
+ product *= c;
+ ++c;
+ ans: The closing brace is absent
+
+b) scanf( "%.4f", &value );
+ans: The format string ".4f" specifies that scanf should read a floating-point number with 
+    exactly four decimal places. However, if the input value does not have exactly four decimal places, 
+    scanf will fail to match the input and leave the input buffer untouched,
+    resulting in the value of value being uninitialized or garbage.
+
+c) if ( gender == 1 )
+ puts( "Woman" );
+else;
+ puts( "Man" );
+ ans: The shouldn't be a semicolon immediately after the "else" keyword
+
+3.9 What’s wrong with the following while iteration statement (assume z has value 100), which
+is supposed to calculate the sum of the integers from 100 down to 1?
+while ( z >= 0 )
+ sum += z; 
+ans: "z" is not decremented in the while loop which therefore leads to an infinite loop
+
+Exercises
+3.10 Identify and correct the errors in each of the following. [Note: There may be more than one
+error in each piece of code.]
+a) if ( sales => 5000 )
+ puts( "Sales are greater than or equal to $5000" )
+else
+ puts( "Sales are less than $5000 ) 
+ans: Error1: Missing braces after the if and else keywords
+     Error2: Missing semicolons in each statement in the if-else blocks;
+     Error3: Missing quotation marks in the statement in the else block.
+
+b) int x = 1, product = 0;
+while ( x <= 10 ); {
+ product *= x;
+ ++x;
+} 
+ans: Error1: Semicolon after the conditional statement in the while loop should be removed
+     Error2: Product should not be initialized to 0 as the product of all numbers and zero remains zero.
+     Error3: variables x and product cannot be initialized in the same line/statement
+
+c) While ( x <= 100 )
+ total =+ x;
+ ++x;
+ ans: Error1: Missing braces after the conditional statement in the while loop
+      Error2: The operator =+ should be written as +=
+
+1 // raise x to the y power 
+2 #include <stdio.h>
+3
+4 int main( void )
+5 {
+6 printf( "%s", "Enter first integer: " );
+7 unsigned int x;
+8 scanf( "%u", &x ); // read value for x from user 
+9 printf( "%s", "Enter second integer: " );
+10 unsigned int y;
+11 scanf( "%u", &y ); // read value for y from user 
+12
+13 unsigned int i = 1; 
+14 unsigned int power = 1; // set power 
+15
+16 while ( i <= y ) { // loop while i is less than or equal to y 
+17 power *= x; // multiply power by x 
+18 ++i; // increment i 
+19 } // end while 
+20
+21 printf( "%u\n", power ); // display power 
+22 } // end main function 
+
+136 Chapter 3 Structured Program Development in C
+d) while ( y < 10 ) {
+ printf( "%d\n", y );
+} 
+ans: the variable y isnever incremented which would lead lead to an infinite loop
+
+3.11 Fill in the blanks in each of the following:
+a) In ______ ______, statements execute one after the other in the order they are written.
+ans: Sequential control structure
+
+b) ______ programs help you “think out” a program.
+ans: pseudocode
+
+c) All programs can be written in terms of ______, ______, ______ control structures.
+ans: Sequence, selection and iteration
+
+d) Flowcharts are drawn using ______, ______, ______ and ______ connected by arrows
+called flowlines.
+ans: rectangles, diamond shaped box, circular rectangles, spheres
+
+e) Flowlines indicate the ______ in which the actions are performed.
+ans: order
+
+f) The ______ multiple-selection statement selects one among many options based on the
+value of an expression.
+ans: switch
+
+g) The ______ operator is C’s only ternary operator. It takes three operands, ______ a
+condition, ______ the value for the conditional expression if the condition is true, and
+_______ the value for the conditional expression if the condition is false.
+ans: The ternary operator, first, second, third
+
+h) The if statement is a ______ structure. 
+ans: selection control
+
+3.12 What does the following program print?
+3.13 Write a single pseudocode statement that indicates each of the following:
+a) Display the message "Enter your name:"
+ans: Prompt user for their name
+
+b) Assign the product of variables a, b, c and d to variable p.
+ans: Compute the value of p using the variables a, b, c and d.
+
+c) The following condition is to be tested in a conditional statement: if x is greater than y,
+then x is assigned the value 10, otherwise x is assigned the value 20. 
+ans: 
+d) Obtain values for variables a, b, c and d from the keyboard.
+ans: prompt user for the digits and store them in the variables a, b, c and d
+
+3.14 Formulate a pseudocode algorithm for each of the following:
+a) Obtain three numbers from the keyboard, compute their product and display the result.
+ans: initialize variables a, b, and c
+     prompt user for three digits and store them in the variables a, b, and c
+     Compute the value of p using the variables a, b, c and d.
+     display the value of p
+
+b) Obtain two numbers from the keyboard, and determine and display which (if either) is
+the smaller of the two numbers.
+c) Obtain a series of positive numbers from the keyboard, and determine and display their
+average. Assume that the user types the sentinel value -1 to indicate “end of data entry.”
+1 #include <stdio.h>
+2
+3 int main( void )
+4 {
+5 int y;
+6 int x = 1;
+7 int total = 0;
+8
+9 while ( x <= 10 ) {
+10 y = x * x * x;
+11 printf( "%d\n", y );
+12 total += y;
+13 ++x;
+14 } // end while
+15
+16 printf( "The total is %d \n", total );
+17 } // end main 
+ Exercises 137
+3.15 State which of the following are true and which are false. If a statement is false, explain why.
+a) An algorithm is a procedure for solving a problem in terms of the actions to be executed,
+without specifying the order of the actions.
+ans: False. The order in which steps are executed are stated in the algorithm
+
+b) Unless directed otherwise, the computer automatically executes C statements in sequence.
+ans: True
+
+c) The if...else double-selection statement selects a single action.
+ans: True
+
+d) A logic error affects the program when the program is compiled.- False
+   It does not fail or terminate the program prematurely. - True
+
+e) You can determine your platform’s maximum unsigned int value with the constant
+unsigned int_MAX from <limits.h>.
