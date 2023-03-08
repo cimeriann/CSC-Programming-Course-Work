@@ -8,5 +8,13 @@ int main (void){
     {
         /* code */
     }
+    switch (expression)
+    {
+    case /* constant-expression */:
+        /* code */
+        break;
     
+    default:
+        break;
+    }
 }
