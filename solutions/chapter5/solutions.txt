@@ -16,17 +16,25 @@ be used.
 ans: scope
 g) The three ways to return control from a called function to a caller are ,
  and .
- ans: return, encountering a closing right brace
-h) A(n) allows the compiler to check the number, types, and order of the arguments passed to a function.
-i) The function is used to produce random numbers.
+ ans: return, encountering a closing right brace, or a return expression
+h) A(n) ______ allows the compiler to check the number, types, and order of the arguments passed to a function.
+ans: function prototype
+i) The ______ function is used to produce random numbers.
+ans: rand 
 j) The function is used to set the random number seed to randomize a program.
+ans: srand
 k) The storage-class specifiers are , , and .
-l) Variables declared in a block or in the parameter list of a function are assumed to be of
+ans: static, automatic, register and extern
+l) Variables declared in a block or in the parameter list of a function are assumed to be of _____
 storage class unless specified otherwise.
-m) A non-static variable defined outside any block or function is a(n) variable.
+ans: automatic
+m) A non-static variable defined outside any block or function is a(n) _______ variable.
+ans: external, global
 n) For a local variable in a function to retain its value between calls to the function, it must
 be declared with the storage-class specifier.
+ans: static
 o) The four possible scopes of an identifier are , , and .
+ans: function scope, file scope, function prototype, 
 p) A function that calls itself either directly or indirectly is a(n) function.
 q) A recursive function typically has two components: one that provides a means for the
 recursion to terminate by testing for a(n) case, and one that expresses the
