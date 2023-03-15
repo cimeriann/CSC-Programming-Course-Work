@@ -1,0 +1,13 @@
+ Write statements that assign random integers to the variable n in the following ranges:
+a) 1 ≤ n ≤ 6
+answer: int n = (rand() % 6) + 1;
+b) 100 ≤ n ≤ 1000
+answer: int n = (rand() % 1000) + 100;
+c) 0 ≤ n ≤ 19
+answer: int n = (rand() % 20);
+d) 1000 ≤ n ≤ 2222
+answer: int n = (rand() % 2223) + 1000;
+e) –1 ≤ n ≤ 1
+answer: int n = (rand() % 3) - 1;
+f) –3 ≤ n ≤ 11
+answer: int n = (rand() % 15) - 3;

@@ -34,19 +34,27 @@ n) For a local variable in a function to retain its value between calls to the f
 be declared with the storage-class specifier.
 ans: static
 o) The four possible scopes of an identifier are , , and .
-ans: function scope, file scope, function prototype, 
-p) A function that calls itself either directly or indirectly is a(n) function.
+ans: function scope, file scope, function prototype, block scope
+p) A function that calls itself either directly or indirectly is a(n) _______ function.
+ans: recursive
 q) A recursive function typically has two components: one that provides a means for the
-recursion to terminate by testing for a(n) case, and one that expresses the
+recursion to terminate by testing for a(n) _____ case, and one that expresses the
 problem as a recursive call for a slightly simpler problem than the original call.
+ans: base case
 5.2 For the following program, state the scope (either function scope, file scope, block scope or
 function-prototype scope) of each of the following elements.
 a) The variable x in main.
+ans: block
 b) The variable y in cube.
+ans: block
 c) The function cube.
+ans: file scope
 d) The function main.
+ans: file scope
 e) The function prototype for cube.
+ans: file scope
 f) The identifier y in the function prototype for cube.
+ans: function prototype scope
  Self-Review Exercises 233
 5.3 Write a program that tests whether the examples of the math library function calls shown
 in Fig. 5.2 actually produce the indicated results.
