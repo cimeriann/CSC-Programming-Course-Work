@@ -16,7 +16,7 @@ double triangle_area(double a, double b, double c){
         return 0;
     }
     double sum = (a + b + c)/2;
-    double area = sqrt(sum * (sum - a) * (sum - b));
+    double area = sqrt(sum * (sum - a) * (sum - b) * (sum - c));
     return area;
 }
 
