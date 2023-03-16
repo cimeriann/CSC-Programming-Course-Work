@@ -2,6 +2,9 @@
 // to function isEven, which uses the remainder operator to determine whether an integer is even. The
 // function should take an integer argument and return 1 if the integer is even and 0 otherwise.
 
+#include <stdio.h>
+#include <stdlib.h>
+
 int checkEven(int num){
     if ((num % 2) == 0){
         return 1;
@@ -14,11 +17,17 @@ int main (void){
     {
         puts("Enter a number, -1 to quit");
         scanf("%d", &num);
+        if (num == -1)
+        {   
+            puts("Quitting");
+            break;
+        }
+        
         int check = checkEven(num);
         if(check){
-            printf("%d is even", num);
+            printf("%d is even\n", num);
         }else{
-            printf("%d is odd", num);
+            printf("%d is odd\n", num);
         }
     }
     
