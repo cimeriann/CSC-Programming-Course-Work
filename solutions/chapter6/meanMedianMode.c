@@ -37,10 +37,14 @@ void mean(const unsigned int answer[]){
     for (size_t i = 0; i < SIZE; i++){
         total += answer[i];
     }
-    50 printf("The mean is the average value of the data\n"
+    printf("The mean is the average value of the data\n"
 "items. The mean is equal to the total of\n"
 "all the data items divided by the number\n"
 "of data items (%u). The mean value for\n"
 "this run is: %u / %u = %.4f\n\n",
 SIZE, total, SIZE, (double) total / SIZE);
+}
+
+void median(unsigned int answer[]){
+    
 }
