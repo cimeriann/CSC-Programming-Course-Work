@@ -46,5 +46,7 @@ SIZE, total, SIZE, (double) total / SIZE);
 }
 
 void median(unsigned int answer[]){
-    
+    printf("\n%s\n%s\n%s\n%s", 
+"********", " Median", "********", 
+"The unsorted array of responses is");
 }
