@@ -1,0 +1,91 @@
+Answer each of the following:
+a) Lists and tables of values are stored in .
+ans: arrays
+b) The number used to refer to a particular element of an array is called its .
+answer: index
+c) A(n) should be used to specify the size of an array because it makes the program more modifiable.
+ans: symbolic constant
+d) The process of placing the elements of an array in order is called the array.
+ans: sorting
+e) Determining whether an array contains a certain key value is called the array.
+ans: searching
+f) An array that uses two indices is referred to as a(n) array.
+ans: two dimensional
+6.2 State whether the following are true or false. If the answer is false, explain why.
+a) An array can store many different types of values.
+ans: False
+b) An array index can be of data type double.
+ans: False
+c) If there are fewer initializers in an initializer list than the number of elements in the array,
+C automatically initializes the remaining elements to the last value in the list of initializers.
+ans: false
+
+d) It’s an error if an initializer list contains more initializers than there are array elements.
+ans: true
+
+e) An individual array element that’s passed to a function as an argument of the form a[i]
+and modified in the called function will contain the modified value in the calling function.
+ans: False
+
+6.3 Follow the instructions below regarding an array called fractions.
+a) Define a symbolic constant SIZE to be replaced with the replacement text 10.
+#define SIZE 10 
+b) Define an array with SIZE elements of type double and initialize the elements to 0. 
+DOUBLE fractions[SIZE] = {0.0};
+c) Refer to array element 4.
+fractions[3];
+d) Assign the value 1.667 to array element nine.
+fractions[8] = 1.667;
+e) Assign the value 3.333 to the seventh element of the array.
+fractions[6] = 3.333;
+f) Print array elements 6 and 9 with two digits of precision to the right of the decimal
+point, and show the output that’s displayed on the screen.
+printf("%.2f %.2f", fractions[5], fractions[8]);
+g) Print all the elements of the array, using a for iteration statement. Assume the integer
+variable x has been defined as a control variable for the loop. Show the output.
+for(x = 0; x < SIZE; ++x){
+    printf("fractions[%u] = %f\n", x, fractions[x]);
+}
+output:
+6.4 Write statements to accomplish the following: 
+a) Define table to be an integer array and to have 3 rows and 3 columns. Assume the symbolic constant SIZE has been defined to be 3.
+code: int myArray[SIZE][SIZE];
+b) How many elements does the array table contain? Print the total number of elements.
+ans: nine
+code: printf("%d", SIZE * SIZE);
+c) Use a for iteration statement to initialize each element of table to the sum of its indices.
+code: for(size_t x = 0; x < SIZE; ++x){
+    for(size_t y = 0; y < SIZE; ++y){
+        myArray[x][y] = x + y;
+    }
+    printf("\n");
+}
+Assume the integer variables x and y are defined as control variables.
+d) Print the values of each element of array table. Assume the array was initialized with
+the definition: 
+int table[SIZE][SIZE] = 
+ { { 1, 8 }, { 2, 4, 6 }, { 5 } };
+ for(size_t x = 0; x < SIZE; ++x){
+    for(size_t y = 0; y < SIZE; ++y){
+        printf("%d", table[x][y]);
+    }
+    printf("\n");
+}
+6.5 Find the error in each of the following program segments and correct the error.
+a) #define SIZE 100;
+ans: semicolon should be omitted
+b) SIZE = 10;
+ans: SIZE cannot be redefined because it is a predefined symbolic constant
+c) Assume int b[10] = { 0 }, i;
+ for (i = 0; i <= 10; ++i) {
+ b[i] = 1;
+ }
+ ans: cannot access variable at b[10] because it is out of bounds
+d) #include <stdio.h>;
+ans: no semicolon should be there after the file has been included
+e) Assume int a[2][2] = { { 1, 2 }, { 3, 4 } };
+ a[1, 1] = 5;
+ ans: the assignment operation will no work becuase of the invalid syntax 
+      when the variable is being referenced
+f) #define VALUE = 120
+ans: There shouldn't be an assignment operator
