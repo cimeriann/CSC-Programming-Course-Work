@@ -1,0 +1,31 @@
+A struct that contains a member that is a pointer to
+the same structure type is a SELF REFERENTIAL STRUCTURE
+A structure cannot contain an instance of itself.
+#Structure definitions do not reserve any space in memory;
+Each defintion creates a new data type which is kinda like a 
+blueprint of how to build instances of that struct.
+
+SO STRUCTURES ARE BASICALLY YOU CREATING YOUR OWN DATA TYPES
+
+*The structure tag name could also be omitted but then I'd have to declare all variables of that 
+struct type in the struct definition.
+
+VALID OPERATIONS THAT MAY BE PERFORMED ON STRUCTURES
+- Assigning struct variables to struct variables of the same type - for a pointer
+  member, this copies only the address stored in the pointer
+- Taking the address of a struct variable
+- Accessing the members of a struct variable
+- using the sizeof operator to determine the size of a struct variables
+
+Boundaries:
+- Half-word
+- word
+- double-word 
+A word is a memory unit used to store data in a computer. Usually 4 bytes or 8 bytes.
+Representation of a structure is machine dependent.
+which of these is not an error tackling technique in c?
+a) Tracing
+b) use of breakpoints
+c) use of step functions
+d) use an interpreter to double check a c program
+e) use of watch values
