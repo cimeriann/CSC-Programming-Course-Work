@@ -1,0 +1,176 @@
+Answer each of the following:
+a) Lists and tables of values are stored in .
+ans: arrays
+b) The number used to refer to a particular element of an array is called its .
+answer: index
+c) A(n) should be used to specify the size of an array because it makes the program more modifiable.
+ans: symbolic constant
+d) The process of placing the elements of an array in order is called the array.
+ans: sorting
+e) Determining whether an array contains a certain key value is called the array.
+ans: searching
+f) An array that uses two indices is referred to as a(n) array.
+ans: two dimensional
+6.2 State whether the following are true or false. If the answer is false, explain why.
+a) An array can store many different types of values.
+ans: False
+b) An array index can be of data type double.
+ans: False
+c) If there are fewer initializers in an initializer list than the number of elements in the array,
+C automatically initializes the remaining elements to the last value in the list of initializers.
+ans: false
+
+d) It’s an error if an initializer list contains more initializers than there are array elements.
+ans: true
+
+e) An individual array element that’s passed to a function as an argument of the form a[i]
+and modified in the called function will contain the modified value in the calling function.
+ans: False
+
+6.3 Follow the instructions below regarding an array called fractions.
+a) Define a symbolic constant SIZE to be replaced with the replacement text 10.
+#define SIZE 10 
+b) Define an array with SIZE elements of type double and initialize the elements to 0. 
+DOUBLE fractions[SIZE] = {0.0};
+c) Refer to array element 4.
+fractions[3];
+d) Assign the value 1.667 to array element nine.
+fractions[8] = 1.667;
+e) Assign the value 3.333 to the seventh element of the array.
+fractions[6] = 3.333;
+f) Print array elements 6 and 9 with two digits of precision to the right of the decimal
+point, and show the output that’s displayed on the screen.
+printf("%.2f %.2f", fractions[5], fractions[8]);
+g) Print all the elements of the array, using a for iteration statement. Assume the integer
+variable x has been defined as a control variable for the loop. Show the output.
+for(x = 0; x < SIZE; ++x){
+    printf("fractions[%u] = %f\n", x, fractions[x]);
+}
+output:
+6.4 Write statements to accomplish the following: 
+a) Define table to be an integer array and to have 3 rows and 3 columns. Assume the symbolic constant SIZE has been defined to be 3.
+code: int myArray[SIZE][SIZE];
+b) How many elements does the array table contain? Print the total number of elements.
+ans: nine
+code: printf("%d", SIZE * SIZE);
+c) Use a for iteration statement to initialize each element of table to the sum of its indices.
+code: for(size_t x = 0; x < SIZE; ++x){
+    for(size_t y = 0; y < SIZE; ++y){
+        myArray[x][y] = x + y;
+    }
+    printf("\n");
+}
+Assume the integer variables x and y are defined as control variables.
+d) Print the values of each element of array table. Assume the array was initialized with
+the definition: 
+int table[SIZE][SIZE] = 
+ { { 1, 8 }, { 2, 4, 6 }, { 5 } };
+ for(size_t x = 0; x < SIZE; ++x){
+    for(size_t y = 0; y < SIZE; ++y){
+        printf("%d", table[x][y]);
+    }
+    printf("\n");
+}
+6.5 Find the error in each of the following program segments and correct the error.
+a) #define SIZE 100;
+ans: semicolon should be omitted
+b) SIZE = 10;
+ans: SIZE cannot be redefined because it is a predefined symbolic constant
+c) Assume int b[10] = { 0 }, i;
+ for (i = 0; i <= 10; ++i) {
+ b[i] = 1;
+ }
+ ans: cannot access variable at b[10] because it is out of bounds
+d) #include <stdio.h>;
+ans: no semicolon should be there after the file has been included
+e) Assume int a[2][2] = { { 1, 2 }, { 3, 4 } };
+ a[1, 1] = 5;
+ ans: the assignment operation will no work becuase of the invalid syntax 
+      when the variable is being referenced
+f) #define VALUE = 120
+ans: There shouldn't be an assignment operator
+
+Fill in the blanks in each of the following:
+a) Arrays are ______ entities as they remain the same size during program execution.
+ans: static
+b) An array is a ______ group of memory locations that share the same ______.
+ans: contiguous, data type
+c) The first element in every array is the ______ element, for example, the first element of
+an array is referred to as ______.
+ans: 0th element, element 0
+d) Array elements are referred by ______ followed by the ______ of the element.
+ans: array name, index of the element
+e) Arrays are passed to functions by ______.
+ans: value
+f) C has no array ______, which means a program can accidentally store data passing the
+bound of the array.
+ans: bounds checking
+g) The ______ operator cannot be used directly with arrays for copying data from one array to another.
+ans: assignment
+h) Every string contains a special string-termination character called the ______ character,
+represented by the character constant ______.
+ans: string termination or null character, '\0'
+i) A 5-by-7 array contains ______ rows, ______ columns and ______ elements
+ans: 5 rows, 7 columns and 35 elements
+j) The name of the element in the second row and third column of an array would be
+______ array[1][2]
+
+6.7 State which of the following are true and which are false. If false, explain why.
+a) If there are fewer initializers in an initializer list than the number of elements in the array,
+the remaining elements will contain garbage values.
+ans: false, they would be initialized to zero
+b) A static local variable in a function definition exists for the duration of the program.
+ans: true, it's restricted by the function scope
+
+c) The type size_t represents an unsigned integral type 
+ans: true
+d) If the array size is omitted from a definition with an initializer list, the number of elements 
+in the array will not be defined.
+ans: false, the compiler determines the size of the array based on the number of elements in it
+
+e) To calculate the amount of memory used by an array, multiply the number of elements
+by the size in bytes each element occupies.
+ans: true
+f) When individual array elements are passed to a function, they are passed by reference
+and their modified value is retained in the calling function.
+ans: false, array elements are passed by value
+6.8 Write statements to accomplish each of the following:
+a) Multiply the value of element 4 of an integer array n with 3 and display it.
+code : printf("%d \n", n[3] * 3);
+
+b) Write a loop that adds all the elements of the array n[10] and stores the result in total.
+code: int total = 0;
+for (size_t i = 0; i < 10; ++i){
+    total += n[i];
+}
+c) Initialize each of the 9 elements of a two-dimensional integer array m[3][3] to 3, using
+loops. 
+for (size_t i = 0; i < 3); ++i{
+    for(size_t j = 0; j < 3; ++j){
+        n[i][j] = 3;
+    }
+}
+d) Find the largest and smallest element of a two dimensional array sales[4][5].
+ Exercises 297
+e) Copy a 100-element array into a 200-element array, starting from the 100th position of
+the larger array.
+f) Determine and store the sum and difference of the values contained in two, 100-element
+double arrays d1 and d2, into double arrays sum and difference.
+6.9 Consider a 5-by-20 integer array grades:
+a) Write a declaration for grades.
+b) How many rows does the array have?
+c) How many columns does the array have?
+d) How many elements does the array have?
+e) Write the names of all elements in the first column of the array.
+f) Write the name of the element in the third row and second column of the array.
+g) Write a single statement to assign the value 100 to the element in the first row and second column.
+h) Write a nested loop to get all the elements from the keyboard.
+i) Write a nested for statement to initialize all elements to zero. 
+j) Write a statement that copies the values from an array double mathGrades[20]into the
+elements of the first row of grades.
+k) Write a series of statements that determine and print the highest value in the first row of grades.
+l) Write a statement to display the elements in column 2 of the array.
+m) Write a statement to calculate the average of the elements in the first row.
+n) Write a series of statements that prints the array grades in a tabular format. List the
+column subscripts as headings across the top and list the row subscripts at the left of
+each row.

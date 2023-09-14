@@ -1,0 +1,38 @@
+Categorize each of the following items as either hardware or software:
+a) a microprocessor - Hardware
+b) RAM - Hardware
+c) Microsoft Visual Studio - Software
+d) a preprocessor - Software
+e) a scanner - Hardware
+f) an internet browser - Software
+
+Fill in the blanks in each of the following statements:
+a) Translator programs called compilers convert programs written in high-level languages into machine language.
+b) A multi-core processor implements multiple processing units on a single integrated-circuit chip.
+c) A loader places a program in memory so that it can be executed.
+d) Programs in machine language generally consist of strings of numbers that instruct computers to perform their most elementary operations one at a time.
+e) A bit is the smallest data item in a computer.
+f) Strings are composed of characters or bytes.
+g) A database is a collection of data organized for easy access and manipulation.
+h) C programs typically go through six phases to be executed. These are preprocessing, compilation, assembly, linking, loading, and execution.
+i) Preprocessors usually allow including other files and various text replacements.
+j) Libraries and frameworks are essentially reusable software components.
+1.6 Fill in the blanks in each of the following statements:
+a) Cloud computing allows software, platforms, and infrastructure to be hosted on demand over the internet.
+b) AJAX (Asynchronous JavaScript and XML), a Web 2.0 technology, helps Internet-based applications perform like desktop applications.
+c) Android, based on the Linux kernel and Java, is the fastest growing mobile and smartphone operating system.
+
+1.7 Discuss the meaning of each of the following phases of execution:
+a) Linking: Linking is the process of combining multiple object files and libraries to create an executable or a complete program. It resolves references to external functions or variables and generates a single executable file.
+
+b) Loading: Loading is the process of bringing a program from storage into memory and preparing it for execution. It involves allocating memory space, resolving references to external libraries or symbols, and setting up the initial state of the program.
+
+c) Execution: Execution refers to the actual running of a program. Once the program is loaded into memory, the processor executes the instructions in the program sequentially, performing the operations specified in the code.
+
+1.8 Standard input, output, and error streams are the standard communication channels between a program and the operating system.
+
+Standard Input (stdin): It is the default input stream where a program reads input from the user or from another program. In C, functions like scanf() read input from stdin.
+
+Standard Output (stdout): It is the default output stream where a program writes its output. Functions like printf() in C send output to stdout, which is typically displayed on the console.
+
+Standard Error (stderr): It is also an output stream used for error messages or diagnostic information. Unlike stdout, stderr is typically not buffered, allowing immediate display of error messages. Error messages or warnings are often written to stderr to separate them from normal program output.
