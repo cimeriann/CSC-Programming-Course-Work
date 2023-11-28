@@ -7,5 +7,6 @@ public class Main {
         String myText = input.nextLine();
 
         System.out.println(myText);
+        input.close();
     }
 }

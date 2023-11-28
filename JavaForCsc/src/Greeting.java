@@ -7,6 +7,7 @@ public class Greeting {
         static String greet(){
         Scanner _scanner = new Scanner(System.in);
         String greeting = _scanner.nextLine();
+        _scanner.close();
         
         return greeting;
     }
