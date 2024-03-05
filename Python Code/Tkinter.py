@@ -73,4 +73,4 @@ class WidgetsDemo:
         print("Your name is " + self.name.get())
 
 
-WidgetsDemo()
+# WidgetsDemo()
