@@ -14,6 +14,7 @@ class CanvasDemo:
         btClear = Button(frame, text="Clear", command=self.clearCanvas)
         btClear.grid(row=1, column=2)
         btRectangle.grid(row=1, column=1)
+        
         window.mainloop()
 
     def displayRectangle(self):
