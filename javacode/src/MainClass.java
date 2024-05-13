@@ -10,5 +10,6 @@ public class MainClass {
         // input.close();
         System.out.println(Math.pow(4, 1/2));
         System.out.println((System.currentTimeMillis() / 1000) % 60);
+        System.out.println((double)1/20);
     }
 } 

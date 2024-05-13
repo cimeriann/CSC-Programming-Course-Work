@@ -1,0 +1,3 @@
+for each elt in the list:
+    if elt < list[i]:
+        smallest = elt
